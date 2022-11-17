@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Kidszone</title>
+</head>
+<body>
+    <section class="header">
+    <div class="topmost">
+        <div class="icons">
+            <img src="https://img.icons8.com/cute-clipart/64/000000/microphone.png"/>
+            <img src="https://img.icons8.com/stickers/100/000000/chatbot.png"/>
+            <img src="https://img.icons8.com/ultraviolet/40/000000/place-marker--v1.png"/>
+            <img src="https://img.icons8.com/ultraviolet/40/000000/phone.png"/>
+            <img src="https://img.icons8.com/color/48/000000/logout-rounded-down.png"/>
+        </div>
+    </div>
+    <center>
+        <h2 class="heading" style="color: orange;">Hello Kiddo! What do you wanna do today?</h2>
+    </center>
+    <div class="buttons">
+        <div>
+            <button  id='hmm' onmouseover="show1();"  onclick='show11();' onmouseout='document.getElementById("opt1").style.visibility = "hidden"'>Entertainment</button> <br>
+            <div id="opt1">
+                <a href="./gamepage.html"><h3 onmouseover="hover();" style="background-color: rgb(219, 47, 133);">Games</h3></a>
+                <h3 onmouseover="hover();"  style="background-color: steelblue;">Fun videos</h3>
+                <h3 onmouseover="hover();"  style="background-color: rgb(109, 241, 109);">Bedtime stories</h3>
+                <h3 onmouseover="hover();"  style="background-color: rgb(241, 241, 68);">Paint</h3>
+                <!-- <h3 onmouseover="hover();"  style="background-color: rgb(247, 30, 62);">Voice assistant</h3> -->
+            </div>
+            
+            
+            <!-- <select name="" id="opt1" >
+                <option value="">Games</option>
+                <option value="">Fun videos</option>
+                <option value="">Bed time stories</option>
+                <option value="">Paint app</option>
+                <option value="">Voice assistant</option>
+            </select> -->
+        </div>
+        <div>
+            <button id="umm" onmouseover='show2();' onclick="show22();" onmouseout='document.getElementById("opt2").style.visibility = "hidden"'>Education</button> <br>
+            <div id="opt2">
+<a href=""> <h3 onmouseover="hover();" style="background-color:  rgb(219, 47, 133);">Quiz</h3></a>      
+          <!-- <h3 onmouseover="hover();" style="background-color: steelblue;">Comprehension</h3> -->
+                <h3 onmouseover="hover();" style="background-color: rgb(109, 241, 109);">Simple things</h3>
+                <h3 onmouseover="hover();" style="background-color: rgb(241, 241, 68);">Good habits</h3>
+                <h3 onmouseover="hover();" style="background-color: rgb(247, 30, 62);">Rhymes</h3>
+            </div>
+        </div>
+    </div>
+</section>
+    <br><br><br><br><br>
+    <section class="secondhalf">
+    <section class="games">
+    <h2 class="headings">Some exciting games for you!</h2>
+    <div class="rows">
+       <a href="https://memorygamebyaashu.netlify.app/"> <div class="m">
+            <img src="./images/memory.jpg" alt="">
+            <center>
+            <h2>Memory game</h2>
+            <p>Ready to get your memory tested?</p>
+            </center>
+        </div></a>
+        <div class="m">
+            <img src="./images/rps.png" alt="">
+            <center>
+            <h2>Rock paper scissors</h2>
+            <p>Who has the guts to win?</p>
+            </center>
+        </div>
+        <div class="m">
+            <img src="./images/snake.png" alt="">
+            <center>
+            <h2>Snake Xenia</h2>
+            <p>Can you beat the last set highscore?</p>
+            </center>
+        </div>
+       <a href="https://wack-a-mole-byaashu.netlify.app/">
+     <div class="m">
+           <img src="./images/wakacole.jpg" alt="">
+           <center>
+               <h2>Wack-a-mole</h2>
+               <p>How many times can you hit the mole?</p>
+            </center>
+        </div>
+       </a>
+    </div>
+    <div class="next">
+        <div>
+
+        </div>
+        <div>
+            <button class="more" style="background-color:black; color:white;">More &#8594</button>
+        </div>
+    </div>
+    </section>
+    <hr>
+    <section class="videos">
+         <h2 class="headings">Some entertaining videos for you!</h2>
+    <div class="rows">
+        <div class="m">
+            <img src="./images/boxes.jpg" alt="">
+            <center>
+            <h2>Opening boxes</h2>
+            <!-- <p>Ready to get your memory tested?</p> -->
+            </center>
+        </div>
+        <div class="m">
+            <img src="./images/open.jpg" alt="">
+            <center>
+            <h2>Making craft</h2>
+            <!-- <p>Who has the guts to win?</p> -->
+            </center>
+        </div>
+        <div class="m">
+            <img src="./images/watering.jpg" alt="">
+            <center>
+            <h2>Watering plants</h2>
+            <!-- <p>Can you beat the last set highscore?</p> -->
+            </center>
+        </div>
+        <div class="m">
+            <img src="./images/toy (1).jpg" alt="">
+            <center>
+            <h2 style="background-color:#00203FFF;">Playing with toys</h2>
+            <!-- <p>How many times can you hit the mole?</p> -->
+           </center>
+        </div>
+    </div>
+    <div class="next">
+        <div>
+
+        </div>
+        <div>
+            <button class="more" id="k" style="background-color:black; color:white;">More &#8594</button>
+        </div>
+    </div>
+</section>
+    </section>
+    <!-- <audio autoplay loop controls>
+    
+  <source src='./sounds/happy-114950.mp3'>
+</audio> -->
+    <script src="app1.js">
+    </script>
+</body>
+</html>

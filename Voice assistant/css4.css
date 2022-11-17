@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #00203FFF;
+  }
+  
+  #speakBtn {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: large;
+    background-color: orange;
+    transform: translate(-50%, -50%);
+    padding: 2rem 4rem;
+  }

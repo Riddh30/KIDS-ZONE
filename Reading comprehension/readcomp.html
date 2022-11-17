@@ -1,0 +1,119 @@
+
+<!DOCTYPE HTML>
+<head>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+	<script src="https://code.responsivevoice.org/responsivevoice.js?key=u6sV35sm"></script>  <!-- replace with KEY-->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<style>
+		body {
+			background-color: #ADEFD1FF  ;
+		}
+		p{
+			font-size: 20px;
+		}
+		.button1 {
+			background-color: #4CAF50; 
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+		.button2 {
+			background-color: #d94d15; 
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+		.button3 {
+			background-color: blue; 
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-xxl">
+		<!-- <h1>Reading Comprehension</h1> -->
+		<div style="text-align:center;width:100%;font-size: calc(5.5vw + 5.5vh);margin-bottom:3%;">
+			<span style="font-family:Helvetica;" id="current_word">
+		</div>
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text">The Golden touch of Midas</span><br>
+		  </div>
+        
+            <br>
+			<textarea id="text" cols="110" rows="15" >   
+				Once upon a time, there was a Greek King, Midas.
+				He was very rich and had lots of Gold. He had a daughter, who he loved a lot.
+				One day, Midas found an angel in need of help. He helped her and in return she agreed to grant a wish.
+				Midas wished that everything he touched would turn into gold. His wish was granted
+				On his way home, he touched rocks and plants and they turned into gold.
+				As he reached home, in excitement he hugged his daughter, who turned into gold.
+				Midas was devastated and he had learnt his lesson. Upon learning his lesson, Midas asked the angel to take his wish away.				
+				Moral:Greed is not good for you. Be content and satisfied to lead a happy and fulfilling life
+				</textarea>
+
+		</div>
+		 <div class="input-group mb-3">
+			<button class="button2" onclick="stop=true" type="button">stop</button>
+			<button class="button1" onclick="stop=false" type="button">start</button>
+        <a href="/readcomp.html"><button class="button3" type="button"> Next </button></a>
+		</div>
+		
+	</div>
+    <select id="voiceselection"></select> 
+     
+    <input 
+      onclick="responsiveVoice.speak($('#text').val(),$('#voiceselection').val());" 
+      type="button" 
+      value="Read this for me" 
+    />
+     
+    <script>
+            //Populate voice selection dropdown
+            var voicelist = responsiveVoice.getVoices();
+            var vselect = $("#voiceselection");
+            $.each(voicelist, function() {
+                    vselect.append($("<option />").val(this.name).text(this.name));
+            });   
+    
+
+	
+		text = 'Once upon a time, there was a Greek King, Midas.He was very rich and had lots of Gold. He had a daughter, who he loved a lot.One day, Midas found an angel in need of help. He helped her and in return she agreed to grant a wish.Midas wished that everything he touched would turn into gold. His wish was granted On his way home, he touched rocks and plants and they turned into gold.As he reached home, in excitement he hugged his daughter, who turned into gold.Midas was devastated and he had learnt his lesson. Upon learning his lesson, Midas asked the angel to take his wish away.Moral of the story Greed is not good for you. Be content and satisfied to lead a happy and fulfilling life'
+		words = text.replace("'", "");
+		words = words.replace(/['"]+/g, '');
+		words = words.split(' ');
+
+		a = 1;
+		speed = 1000;
+		stop = true;
+
+		function scanner() {
+			document.getElementById('current_word').innerHTML = words[a];
+			if (stop == false) {
+				a++;
+			}
+			a = a % (words.length);
+
+			setTimeout(scanner, speed);
+		}
+
+		scanner();
+
+	</script>
+</body>
+</html>
